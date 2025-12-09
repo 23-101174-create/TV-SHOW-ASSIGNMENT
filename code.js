@@ -102,3 +102,29 @@ function selectCharacter(characterId) {
     
     loadCharacterPage(characterId);
 }
+function loadCharacterPage(characterId) {
+    const character = characters.find(c => c.id === characterId);
+    
+    if (!character) return;
+
+    const charEmojiElement = document.getElementById('charEmoji');
+    charEmojiElement.innerHTML = `<img src="${character.image}" alt="${character.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;" onerror="this.src='placeholder.jpg'">`;
+    
+    document.getElementById('charName').textContent = character.name;
+    document.getElementById('charRole').textContent = character.role;
+    document.getElementById('charActor').textContent = character.actor;
+    document.getElementById('charFirstAppearance').textContent = `First Appearance: ${character.firstAppearance}`;
+    document.getElementById('charBio').textContent = character.fullBio;
+    document.getElementById('charQuote').textContent = `"${character.quote}"`;
+
+    const traitsContainer = document.getElementById('charTraits');
+    traitsContainer.innerHTML = '';
+    character.traits.forEach(trait => {
+        const traitSpan = document.createElement('span');
+        traitSpan.className = 'trait';
+        traitSpan.textContent = trait;
+        traitsContainer.appendChild(traitSpan);
+    });
+
+    showPage('character');
+}
