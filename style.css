@@ -94,3 +94,79 @@ nav a::after {
 nav a:hover::after {
     width: 100%;
 }
+.hero {
+    height: 100vh;
+    width: 100%;
+    background:url(imgs/background-pic.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        var(--overlay-red-med) 2px,
+        var(--overlay-red-med) 4px
+    );
+    animation: scan 8s linear infinite;
+}
+
+@keyframes scan {
+    0% { transform: translateY(-50%); }
+    100% { transform: translateY(0); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1 {
+    font-size: 100px;
+    font-family:"Abhaya Libre";
+    text-shadow: 0 0 20px var(--primary-red), 0 0 40px var(--primary-red);
+    letter-spacing: 8px;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 20px var(--primary-red), 0 0 40px var(--primary-red); }
+    to { text-shadow: 0 0 30px var(--primary-red), 0 0 60px var(--primary-red), 0 0 80px var(--primary-red); }
+}
+
+.paragraph-title{
+    font-size: 17px;
+    line-height: 1.8; 
+    color: var(--text-light);
+    font-family: "Roboto";
+}
+
+.hero p {
+    font-family: "Roboto";
+    font-size: 22px;
+    opacity: 0.9;
+}
