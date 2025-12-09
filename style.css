@@ -311,3 +311,133 @@ h2 {
     font-size: 15px;
     line-height: 1.6;
 }
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+    margin-top: 32px;
+}
+.episode-card {
+    background: var(--bg-darker);
+    padding: 24px;
+    font-size: 13px;
+    font-family: "Roboto";
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-red);
+    transition: all 0.3s;
+}
+.episode-card:hover {
+    background: var(--bg-card);
+    transform: translateX(10px);
+}
+.episode-card h4 {
+    color: var(--primary-red);
+    margin-bottom: 8px;
+    font-size: 19px;
+    font-family: "Roboto";
+}
+.char-hero {
+    height: 90vh;
+    background: linear-gradient(var(--overlay-black-dark), var(--bg-black)), 
+                linear-gradient(135deg, var(--gradient-image-start), var(--gradient-image-end));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 70px;
+}
+.char-emoji {
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+.character-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.char-emoji img {
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: contain;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px var(--overlay-red-dark);
+}
+.char-content {
+    max-width: 900px;
+    margin: -50px auto 0;
+    padding: 32px;
+    position: relative;
+}
+.char-header {
+    background: linear-gradient(145deg, var(--gradient-card-start), var(--gradient-card-end));
+    padding: 48px;
+    border-radius: 15px;
+    border: 2px solid var(--primary-red);
+    margin-bottom: 32px;
+    box-shadow: 0 20px 60px var(--overlay-red-dark);
+}
+.char-name {
+    font-size: 56px;
+    font-family: "Roboto";
+    color: var(--primary-red);
+    margin-bottom: 8px;
+    text-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+}
+.char-role-big {
+    font-family: "Roboto";
+    font-size: 21px;
+    color: var(--text-gray);
+    margin-bottom: 24px;
+}
+.char-actor {
+    font-family: "Roboto";
+    font-size: 18px;
+    color: var(--text-dark-gray);
+    margin-bottom: 16px;
+}
+.char-section {
+    background: var(--overlay-dark);
+    padding: 32px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    border-left: 4px solid var(--primary-red);
+}
+.char{
+    line-height: 1.8;
+    color: var(--text-light);
+    font-size: 18px;
+    font-family: "Roboto";
+}
+.char-section h3 {
+    font-family: "Roboto";
+    color: var(--primary-red);
+    font-size: 29px;
+    margin-bottom: 16px;
+}
+.traits {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+.trait {
+    background: var(--primary-red);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: bold;
+}
+.quote-box {
+    background: var(--overlay-red-light);
+    border-left: 4px solid var(--primary-red);
+    padding: 24px;
+    font-style: italic;
+    font-family: "Roboto";
+    font-size: 19px;
+    margin: 32px 0;
+}
