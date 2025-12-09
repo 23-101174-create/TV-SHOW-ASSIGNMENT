@@ -5,7 +5,7 @@
 }
 
 body {
-    background:url(imgs/login-back\ 1.png);
+    background:url(imgs/login-back.png);
     background-size: cover;
     background-attachment: fixed;
     min-height: 100vh;
@@ -36,7 +36,9 @@ body {
 }
 
 .logo h1 {
-    font-size: 42px;
+    font-family:"Abhaya Libre";
+    font-weight: 400;
+    font-size: 44px;
     letter-spacing: 8px;
     color: #e50914;
     text-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
@@ -47,4 +49,113 @@ body {
     color: #999;
     font-size: 14px;
     margin-top: 10px;
+    font-family: "Roboto";
+}
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ddd;
+    font-size: 18px;
+    font-family: "Roboto";
+    font-weight: 400;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: #fff;
+    font-size: 12px;
+    font-family: "Roboto";
+    transition: all 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #e50914;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.3);
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 13px;
+    font-family: "Roboto";
+}
+
+.remember-forgot label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.remember-forgot input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.remember-forgot a {
+    color: #e50914;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.remember-forgot a:hover {
+    color: #ff2a2a;
+    text-decoration: underline;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    background: #e50914;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    font-family: "Roboto";
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+}
+
+.btn-login:hover {
+    background: #ff2a2a;
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+    transform: translateY(-2px);
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    font-family: "Roboto";
+    color: #999;
+}
+
+.signup-link a {
+    color: #e50914;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
 }
