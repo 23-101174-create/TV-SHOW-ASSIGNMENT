@@ -170,3 +170,62 @@ nav a:hover::after {
     font-size: 22px;
     opacity: 0.9;
 }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 64px 32px;
+}
+section {
+    padding: 64px 0;
+}
+
+h2 {
+    font-size: 48px;
+    font-family: "Roboto";
+    margin-bottom: 32px;
+    text-align: center;
+    color: var(--primary-red);
+    text-transform: uppercase;
+    letter-spacing: 3.2px;
+}
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+.about-2{
+    display: grid;
+    gap: 48px;
+}
+
+.show-info {
+    background: var(--overlay-red-light);
+    padding: 32px;
+    border-radius: 10px;
+    border: 1px solid var(--border-red);
+    font-family: "Roboto";
+}
+.show-info h3 {
+    color: var(--primary-red);
+    margin-bottom: 16px;
+    font-family: "Roboto";
+    font-size: 24px;
+}
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+}
+.info-item {
+    background: var(--overlay-black-light);
+    padding: 16px;
+    border-radius: 5px;
+    text-align: center;
+}
+.info-item strong {
+    display: block;
+    color: var(--primary-red);
+    margin-bottom: 8px;
+}
