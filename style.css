@@ -25,6 +25,7 @@
     --gradient-card-end: #0d0d0d;
     --gradient-image-start: #2c1810;
     --gradient-image-end: #1a0a0a;
+    --button-color:#870000;
 }
 
 * {
@@ -63,7 +64,8 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 48px;
+    gap: 54px;
+    align-items: center;
 }
 
 nav a {
@@ -89,6 +91,21 @@ nav a::after {
     height: 2px;
     background: var(--primary-red);
     transition: width 0.3s;
+}
+.button{
+    display: flex;
+    width: 150px;
+    height: 40px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 19px;
+    background:var(--text-white);
+    color: var(--button-color);
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 500;
 }
 
 nav a:hover::after {
