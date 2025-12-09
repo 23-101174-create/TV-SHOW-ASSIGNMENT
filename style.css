@@ -229,3 +229,85 @@ h2 {
     color: var(--primary-red);
     margin-bottom: 8px;
 }
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-top: 48px;
+}
+.character-card {
+    background: linear-gradient(145deg, var(--gradient-card-start), var(--gradient-card-end));
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    position: relative;
+}
+.character-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(145deg, var(--overlay-red-light), transparent);
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+.character-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--primary-red);
+    box-shadow: 0 10px 40px var(--overlay-red-dark);
+}
+.character-card:hover::before {
+    opacity: 1;
+}
+.character-image {
+    width: 100%;
+    height: 350px;
+    background: linear-gradient(135deg, var(--gradient-image-start), var(--gradient-image-end));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto";
+    font-size: 128px;
+    position: relative;
+    overflow: hidden;
+}
+.character-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.character-card:hover .character-image::after {
+    left: 100%;
+}
+.character-info {
+    padding: 24px;
+    position: relative;
+}
+.character-info h3 {
+    font-size: 29px;
+    font-family: "Roboto";
+    margin-bottom: 8px;
+    color: var(--text-white);
+}
+.character-role {
+    color: var(--primary-red);
+    font-family: "Roboto";
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.character-info p {
+    color: var(--text-gray);
+    font-family: "Roboto";
+    font-size: 15px;
+    line-height: 1.6;
+}
