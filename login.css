@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background:url(imgs/login-back\ 1.png);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+.login-box {
+    background: rgba(0, 0, 0, 0.85);
+    border: 2px solid rgba(229, 9, 20, 0.3);
+    border-radius: 8px;
+    padding: 60px 50px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 0 30px rgba(229, 9, 20, 0.2);
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo h1 {
+    font-size: 42px;
+    letter-spacing: 8px;
+    color: #e50914;
+    text-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+    font-weight: bold;
+}
+
+.logo p {
+    color: #999;
+    font-size: 14px;
+    margin-top: 10px;
+}
