@@ -7,4 +7,8 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     if (email && password) {
         alert('Login successful! Welcome to the Upside Down... I mean, the fan site!');
     }
+
+    if (email == "rawda" && password == "123"){
+        window.location == "index.html";
+    }
 });
