@@ -128,3 +128,38 @@ function loadCharacterPage(characterId) {
 
     showPage('character');
 }
+
+function showPage(pageName) {
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+
+    if (pageName === 'home') {
+        document.getElementById('homePage').classList.add('active');
+    } else if (pageName === 'character') {
+        document.getElementById('characterPage').classList.add('active');
+        window.scrollTo(0, 0);
+    }
+}
+
+function scrollToSection(sectionId) {
+    showPage('home');
+    
+    setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, 100);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderCharacters();
+
+    const savedCharacterId = sessionStorage.getItem('selectedCharacterId');
+    if (savedCharacterId) {
+        showPage('home');
+    } else {
+        showPage('home');
+    }
+});
