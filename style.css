@@ -441,3 +441,53 @@ h2 {
     font-size: 19px;
     margin: 32px 0;
 }
+footer {
+    background: var(--bg-black);
+    text-align: center;
+    padding: 32px;
+    border-top: 1px solid var(--border-red);
+    margin-top: 64px;
+}
+.footer-text{
+    margin-top: 8px;
+    color: var(--text-dark-gray);
+    font-family: "Roboto";
+    font-size: 19px;
+}
+.footer-text-2{
+    margin-top: 8px;
+    color: var(--text-white);
+    font-family: "Roboto";
+    font-size: 19px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    nav ul {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .char-name {
+        font-size: 40px;
+    }
+
+    .char-emoji {
+        font-size: 160px;
+    }
+}
